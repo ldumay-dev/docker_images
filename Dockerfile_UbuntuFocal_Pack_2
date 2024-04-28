@@ -1,0 +1,30 @@
+# syntax=docker/dockerfile:1
+
+# - - - - - - - - - - - - - - - - - - - - - - -
+# - Titre : Ubuntu Focal Pack 2
+# - OS Version : Ubuntu 20.04
+# - Fichier : Dockerfile_UbuntuFocal_Pack_2
+# - - - - - - - - - - - - - - - - - - - - - - -
+
+# Métadonnées de l'image
+# LABEL os_version="Ubuntu 20.04"
+# LABEL version="1.0.0"
+# LABEL file="Dockerfile_UbuntuFocal_Pack_2"
+# LABEL maintainer="vdumay <hello@ldumay.fr>"
+# LABEL website="https://ldumay.fr"
+# LABEL mail="hello@ldumay.fr"
+# LABEL description="Ubuntu Focal Pack 2\
+# 	Ceci est une image d'Ubuntu Focal 20.04 avec des paquets avancés."
+# MAINTAINER ldumay
+
+# OS de base : Ubuntu Focal 20.04 20240416
+FROM ubuntu:focal-20240416
+
+# Mise à jour et mise à niveau du noyaux du conteneur
+RUN apt-get upgrade && apt-get update && apt-get clean
+
+# Installation des paquets de bases
+RUN apt-get -y install locales language-pack-en-base
+RUN apt-get -y install fontconfig libfontconfig1 fonts-dejavu-core fonts-dejavu-extra
+RUN apt-get -y install openjdk-11-jdk
+RUN apt-get -y install nginx
