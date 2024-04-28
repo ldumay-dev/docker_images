@@ -24,6 +24,7 @@
 	- Détails paquets inclus :
 		- vim nano tree
 		- curl wget net-tools
+	- [Lien Docker Hub](https://hub.docker.com/repository/docker/ldumay/ubuntu_focal_pack_1)
 - Image 2
 	- Titre : Ubuntu Focal Pack 2
 	- Image de bas : Ubuntu Focal Pack 2 (ubuntu_focal_pack_1:1.0.0)
@@ -34,6 +35,7 @@
 		- libfontconfig1 fontconfig fonts-dejavu-core fonts-dejavu-extra
 		- openjdk11
 		- nginx
+	- [Lien Docker Hub](https://hub.docker.com/repository/docker/ldumay/ubuntu_focal_pack_2)
 		
 
 ## Construction
