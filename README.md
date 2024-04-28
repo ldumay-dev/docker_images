@@ -16,6 +16,8 @@
 
 ### Images docker d'Ubuntu
 
+[Image source](https://hub.docker.com/layers/library/ubuntu/focal-20240416/images/sha256-cc61ae337f89ec395bf1d0b13c6f58ee834e3fc57b0de67694302bb637294300?context=explore)
+
 - Image 1
 	- Titre : Ubuntu Focal Pack 1
 	- Image de bas : Ubuntu Focal Pack 1 (ubuntu:focal-20240416)
