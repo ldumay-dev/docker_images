@@ -1,0 +1,34 @@
+# syntax=docker/dockerfile:1
+
+# - - - - - - - - - - - - - - - - - - - - - - -
+# - Titre : Ubuntu Jammy Pack 1
+# - OS Version : Ubuntu 22.04
+# - Fichier : Dockerfile_UbuntuJammy_Pack_1
+# - - - - - - - - - - - - - - - - - - - - - - -
+
+# Métadonnées de l'image
+# LABEL os_version="Ubuntu 22.04"
+# LABEL version="1.0.0"
+# LABEL file="Dockerfile_UbuntuJammy_Pack_1"
+# LABEL maintainer="vdumay <hello@ldumay.fr>"
+# LABEL website="https://ldumay.fr"
+# LABEL mail="hello@ldumay.fr"
+# LABEL description="Ubuntu Jammy Pack 2\
+# 	Ceci est une image d'Ubuntu Jammy 22.04 avec des paquets avancés."
+# MAINTAINER ldumay
+
+# OS de base : Ubuntu Jammy 22.04
+FROM ubuntu:jammy
+
+# Mise à jour et mise à niveau du noyaux du conteneur
+RUN apt-get upgrade && apt-get update && apt-get clean
+
+# Installation des paquets de bases
+RUN apt-get -y install locales language-pack-en-base
+RUN apt-get -y install fontconfig libfontconfig1 fonts-dejavu-core fonts-dejavu-extra
+RUN apt-get -y install git
+RUN apt-get -y install openjdk-11-jdk mvn
+RUN apt-get -y install jenkins
+
+# Exposition des ports
+EXPOSE 8080 50000
