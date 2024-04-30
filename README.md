@@ -8,6 +8,7 @@
 .
 ├── Dockerfile_UbuntuFocal_Pack_1
 ├── Dockerfile_UbuntuFocal_Pack_2
+├── Dockerfile_UbuntuJammy_Pack_1
 ├── Dockerfile_Z_test
 └── README.md
 
@@ -38,6 +39,14 @@
 		- openjdk11
 		- nginx
 	- [Lien Docker Hub](https://hub.docker.com/repository/docker/ldumay/ubuntu_focal_pack_2)
+- Image 3
+	- Titre : Ubuntu Jammy Pack 1
+	- Image de bas : Ubuntu Jammy Pack 1 (ubuntu:jammy)
+	- OS Version : Ubuntu 22.04
+	- Fichier : Dockerfile_UbuntuJammy_Pack_1
+	- Détails paquets inclus :
+		- ... in coming ...
+	- [Lien Docker Hub](https://hub.docker.com/repository/docker/ldumay/ubuntu_jammy_pack_1)
 		
 
 ## Construction
@@ -51,4 +60,12 @@ docker tag ldumay/ubuntu_focal_pack_2:1.0.0 ldumay/ubuntu_focal_pack_2:1.0.0
 docker push ldumay/ubuntu_focal_pack_2:1.0.0
 docker build . -t ubuntu_focal_pack_test:1.0.0 -f Dockerfile_Z_test
 docker run --name test -it ubuntu_focal_pack_test:1.0.0 /bin/sh
+```
+
+----
+
+```bash
+docker build . -t ldumay/ubuntu_jammy_pack_1:1.0.0 -f Dockerfile_UbuntuJammy_Pack_1
+docker tag ldumay/ubuntu_jammy_pack_1:1.0.0 ldumay/ubuntu_jammy_pack_1:1.0.0
+docker push ldumay/ubuntu_jammy_pack_1:1.0.0
 ```
